@@ -98,12 +98,8 @@ private.pem
 extension.key
 
 # ==========================================================================
-# Generated Assets
+# Generated Build Output (not required assets)
 # ==========================================================================
-assets/icons/
-assets/wallpapers/background.webp
-assets/wallpapers/background-dark.webp
-assets/wallpapers/thumbnail.webp
 
 # ==========================================================================
 # Misc
