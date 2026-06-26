@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brutalist Chrome - Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar-nav">
+      <div id="sidebar-brand">
+        <span id="sidebar-logo">◆</span>
+        <span>Brutalist</span>
+      </div>
+      <nav id="nav-tabs">
+        <button class="nav-tab active" data-tab="general">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <span>General</span>
+        </button>
+        <button class="nav-tab" data-tab="appearance">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <span>Appearance</span>
+        </button>
+        <button class="nav-tab" data-tab="widgets">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Widgets</span>
+        </button>
+        <button class="nav-tab" data-tab="weather">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          <span>Weather</span>
+        </button>
+        <button class="nav-tab" data-tab="bookmarks">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          <span>Bookmarks</span>
+        </button>
+        <button class="nav-tab" data-tab="productivity">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Productivity</span>
+        </button>
+        <button class="nav-tab" data-tab="shortcuts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span>Shortcuts</span>
+        </button>
+        <button class="nav-tab" data-tab="about">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>About</span>
+        </button>
+      </nav>
+      <div id="sidebar-footer">
+        <button id="btn-reset" class="nav-action-btn">Reset All</button>
+      </div>
+    </aside>
+
+    <main id="main-content">
+      <div id="content-header">
+        <h1 id="content-title">Settings</h1>
+        <div id="content-actions">
+          <button id="btn-export" class="btn btn-secondary">Export</button>
+          <button id="btn-import" class="btn btn-secondary">Import</button>
+          <button id="btn-save" class="btn btn-primary">Save Changes</button>
+        </div>
+      </div>
+
+      <div id="tab-content">
+        <!-- General -->
+        <div class="tab-pane active" id="tab-general">
+          <h2 class="tab-heading">General Settings</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Theme</label>
+                <span class="setting-desc">Choose your preferred color theme</span>
+              </div>
+              <div class="setting-control">
+                <select id="setting-theme" class="select">
+                  <option value="dark">Dark</option>
+                  <option value="light">Light</option>
+                  <option value="oled">OLED (True Black)</option>
+                  <option value="sepia">Sepia</option>
+                  <option value="auto">Auto (Time-based)</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Accent Color</label>
+                <span class="setting-desc">Primary accent color for highlights</span>
+              </div>
+              <div class="setting-control">
+                <input type="color" id="setting-accent" class="color-picker" value="#c4a882" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Font Size</label>
+                <span class="setting-desc">Base font size for the extension</span>
+              </div>
+              <div class="setting-control">
+                <select id="setting-font-size" class="select">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Language</label>
+                <span class="setting-desc">Interface language</span>
+              </div>
+              <div class="setting-control">
+                <select id="setting-language" class="select">
+                  <option value="en-US">English (US)</option>
+                  <option value="en-GB">English (UK)</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                  <option value="de">German</option>
+                  <option value="ja">Japanese</option>
+                  <option value="zh-CN">Chinese (Simplified)</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Auto Update</label>
+                <span class="setting-desc">Automatically check for updates</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-auto-update" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appearance -->
+        <div class="tab-pane" id="tab-appearance">
+          <h2 class="tab-heading">Appearance</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Glass Effect</label>
+                <span class="setting-desc">Frosted glass background effect</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-glass-effect" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Blur Intensity</label>
+                <span class="setting-desc">Strength of the glass blur effect</span>
+              </div>
+              <div class="setting-control">
+                <input type="range" id="setting-blur" class="range" min="0" max="20" value="10" />
+                <span id="setting-blur-value" class="range-value">10px</span>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Animations</label>
+                <span class="setting-desc">Enable UI animations and transitions</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-animations" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Show Badge</label>
+                <span class="setting-desc">Show time-based icon badge</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-show-badge" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Compact Mode</label>
+                <span class="setting-desc">Reduced spacing in popup</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-compact" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Font Family</label>
+                <span class="setting-desc">UI font family</span>
+              </div>
+              <div class="setting-control">
+                <select id="setting-font-family" class="select">
+                  <option value="'Inter', system-ui, sans-serif">Inter</option>
+                  <option value="system-ui, sans-serif">System UI</option>
+                  <option value="'SF Pro Display', sans-serif">SF Pro</option>
+                  <option value="'JetBrains Mono', monospace">JetBrains Mono</option>
+                  <option value="'Georgia', serif">Georgia</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item setting-item-full">
+              <div class="setting-info">
+                <label class="setting-label">Custom CSS</label>
+                <span class="setting-desc">Inject custom CSS into pages</span>
+              </div>
+              <div class="setting-control">
+                <textarea id="setting-custom-css" class="textarea" rows="4" placeholder="/* Your custom CSS here */"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widgets -->
+        <div class="tab-pane" id="tab-widgets">
+          <h2 class="tab-heading">Widget Settings</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Weather Widget</label>
+                <span class="setting-desc">Show weather information</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-weather" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Todo Widget</label>
+                <span class="setting-desc">Show task list</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-todo" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Quick Links</label>
+                <span class="setting-desc">Show quick link shortcuts</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-links" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Search Bar</label>
+                <span class="setting-desc">Show search bar in popup</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-search" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Clock Display</label>
+                <span class="setting-desc">Show clock in popup</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-clock" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Date Display</label>
+                <span class="setting-desc">Show date in popup</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-widget-date" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weather -->
+        <div class="tab-pane" id="tab-weather">
+          <h2 class="tab-heading">Weather Configuration</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Temperature Unit</label>
+                <span class="setting-desc">Celsius or Fahrenheit</span>
+              </div>
+              <div class="setting-control">
+                <select id="setting-weather-unit" class="select">
+                  <option value="celsius">Celsius (°C)</option>
+                  <option value="fahrenheit">Fahrenheit (°F)</option>
+                </select>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Location</label>
+                <span class="setting-desc">City name or "auto" for geolocation</span>
+              </div>
+              <div class="setting-control">
+                <input type="text" id="setting-weather-location" class="input" placeholder="e.g. London, auto" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">API Key</label>
+                <span class="setting-desc">OpenWeatherMap API key (free tier)</span>
+              </div>
+              <div class="setting-control">
+                <input type="password" id="setting-weather-api-key" class="input" placeholder="Enter API key" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Refresh Interval</label>
+                <span class="setting-desc">Minutes between weather updates</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-weather-interval" class="input" min="5" max="120" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Show Forecast</label>
+                <span class="setting-desc">Display 5-day forecast</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-weather-forecast" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bookmarks -->
+        <div class="tab-pane" id="tab-bookmarks">
+          <h2 class="tab-heading">Bookmark Links</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Show Favorites</label>
+                <span class="setting-desc">Show bookmarked favorites</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-bookmark-favorites" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Favorites Limit</label>
+                <span class="setting-desc">Maximum number of favorites to show</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-favorites-limit" class="input" min="1" max="50" />
+              </div>
+            </div>
+          </div>
+          <h3 class="tab-subheading">Quick Links</h3>
+          <div id="quick-links-editor"></div>
+          <button id="btn-add-link" class="btn btn-secondary" style="margin-top: 8px;">+ Add Link</button>
+        </div>
+
+        <!-- Productivity -->
+        <div class="tab-pane" id="tab-productivity">
+          <h2 class="tab-heading">Pomodoro Timer</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Work Duration</label>
+                <span class="setting-desc">Minutes per pomodoro session</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-pomodoro-duration" class="input" min="1" max="120" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Short Break</label>
+                <span class="setting-desc">Minutes for short break</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-short-break" class="input" min="1" max="30" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Long Break</label>
+                <span class="setting-desc">Minutes for long break</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-long-break" class="input" min="1" max="60" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Pomodoros Before Long Break</label>
+                <span class="setting-desc">Number of pomodoros before a long break</span>
+              </div>
+              <div class="setting-control">
+                <input type="number" id="setting-pomodoro-count" class="input" min="1" max="10" />
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Auto Start Breaks</label>
+                <span class="setting-desc">Automatically start break timer</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-auto-breaks" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Auto Start Pomodoros</label>
+                <span class="setting-desc">Automatically start next pomodoro</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-auto-pomodoros" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Notifications</label>
+                <span class="setting-desc">Show pomodoro notifications</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-pomodoro-notifications" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Sound</label>
+                <span class="setting-desc">Play sound on timer completion</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-pomodoro-sound" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shortcuts -->
+        <div class="tab-pane" id="tab-shortcuts">
+          <h2 class="tab-heading">Keyboard Shortcuts</h2>
+          <div class="setting-group">
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Enable Shortcuts</label>
+                <span class="setting-desc">Enable keyboard shortcuts globally</span>
+              </div>
+              <div class="setting-control">
+                <label class="toggle">
+                  <input type="checkbox" id="setting-shortcuts-enabled" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="setting-item">
+              <div class="setting-info">
+                <label class="setting-label">Search Engine</label>
+                <span class="setting-desc">Search engine URL (use %s for query)</span>
+              </div>
+              <div class="setting-control">
+                <input type="text" id="setting-search-engine" class="input" placeholder="https://www.google.com/search?q=" />
+              </div>
+            </div>
+          </div>
+          <div class="shortcuts-list">
+            <div class="shortcut-item">
+              <span class="shortcut-action">Open Popup</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+K</kbd>
+            </div>
+            <div class="shortcut-item">
+              <span class="shortcut-action">Toggle Sidebar</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+S</kbd>
+            </div>
+            <div class="shortcut-item">
+              <span class="shortcut-action">Toggle Theme</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+T</kbd>
+            </div>
+            <div class="shortcut-item">
+              <span class="shortcut-action">Command Palette</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+P</kbd>
+            </div>
+            <div class="shortcut-item">
+              <span class="shortcut-action">Search Selection</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+F</kbd>
+            </div>
+            <div class="shortcut-item">
+              <span class="shortcut-action">Quick Add Todo</span>
+              <kbd class="shortcut-keys">Ctrl+Shift+Q</kbd>
+            </div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="tab-pane" id="tab-about">
+          <h2 class="tab-heading">About Brutalist Chrome</h2>
+          <div class="about-section">
+            <div class="about-logo">◆</div>
+            <h3 class="about-name">Brutalist Chrome</h3>
+            <p class="about-version">Version <span id="about-version">2.0.0</span></p>
+            <p class="about-desc">A brutalist dark theme enhancement for Chrome with built-in productivity tools. Features include weather widgets, pomodoro timer, todo management, quick links, and a command palette.</p>
+            <div class="about-info">
+              <div class="about-info-item">
+                <span class="about-info-label">Permissions</span>
+                <span class="about-info-value">Storage, Tabs, Bookmarks, History, Notifications, Alarms</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Manifest</span>
+                <span class="about-info-value">V3</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Host Permissions</span>
+                <span class="about-info-value">&lt;all_urls&gt;</span>
+              </div>
+            </div>
+            <div class="about-links">
+              <a href="#" id="about-report">Report Issue</a>
+              <a href="#" id="about-website">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

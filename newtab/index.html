@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <div class="background-layer">
+    <div class="background-image"></div>
+    <div class="background-overlay"></div>
+  </div>
+
+  <div class="particle-container" id="particle-container"></div>
+
+  <div class="app-layout">
+    <main class="main-content" id="main-content">
+      <header class="top-bar">
+        <div class="clock-widget" id="clock-widget"></div>
+        <div class="weather-widget" id="weather-widget"></div>
+      </header>
+
+      <section class="search-section" id="search-section">
+        <div class="greeting" id="greeting"></div>
+        <div class="search-container" id="search-container"></div>
+      </section>
+
+      <section class="quote-section" id="quote-section">
+        <div class="quote-card" id="quote-card"></div>
+      </section>
+
+      <section class="bookmarks-section" id="bookmarks-section">
+        <div class="section-header">
+          <h2 class="section-title">Bookmarks</h2>
+          <div class="section-actions">
+            <button class="btn-icon" id="add-bookmark-btn" title="Add bookmark">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="bookmark-grid" id="bookmark-grid"></div>
+      </section>
+
+      <section class="todo-section" id="todo-section">
+        <div class="section-header">
+          <h2 class="section-title">Tasks</h2>
+        </div>
+        <div class="todo-container" id="todo-container"></div>
+      </section>
+
+      <section class="notes-section" id="notes-section">
+        <div class="section-header">
+          <h2 class="section-title">Notes</h2>
+        </div>
+        <div class="notes-container" id="notes-container"></div>
+      </section>
+    </main>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-content" id="sidebar-content"></div>
+    </aside>
+  </div>
+
+  <div class="quick-links" id="quick-links">
+    <div class="quick-links-content" id="quick-links-content"></div>
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title"></h3>
+        <button class="btn-icon modal-close" id="modal-close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "./components/Sidebar.js": "./components/Sidebar.js",
+        "./components/SearchBar.js": "./components/SearchBar.js",
+        "./components/Cards.js": "./components/Cards.js",
+        "./components/WeatherCard.js": "./components/WeatherCard.js",
+        "./components/Clock.js": "./components/Clock.js",
+        "./components/QuoteCard.js": "./components/QuoteCard.js",
+        "./components/BookmarkGrid.js": "./components/BookmarkGrid.js"
+      }
+    }
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

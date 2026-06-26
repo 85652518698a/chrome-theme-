@@ -1,0 +1,320 @@
+/* ==========================================================================
+   Brutalist Chrome — Design Tokens & Custom Properties
+   ========================================================================== */
+
+:root {
+  /* ======================================================================
+     Colors — Full Palette
+     ====================================================================== */
+
+  /* Primary — Deepest grays */
+  --color-primary: #1a1a1a;
+  --color-primary-light: #2a2a2a;
+  --color-primary-dark: #111111;
+
+  /* Secondary — Mid grays */
+  --color-secondary: #2a2a2a;
+  --color-secondary-light: #333333;
+  --color-secondary-dark: #222222;
+
+  /* Surface — Elevated backgrounds */
+  --color-surface: #222222;
+  --color-surface-light: #2e2e2e;
+  --color-surface-dark: #1a1a1a;
+
+  /* Background — Page-level */
+  --color-background: #111111;
+  --color-background-light: #1a1a1a;
+
+  /* Text */
+  --color-text: #f0ece4;
+  --color-text-secondary: #a09888;
+  --color-text-muted: #706858;
+  --color-text-inverse: #111111;
+
+  /* Accent — Warm gold */
+  --color-accent: #c4a882;
+  --color-accent-light: #d4c4a8;
+  --color-accent-dark: #a08860;
+  --color-accent-muted: #8a7a62;
+
+  /* Borders */
+  --color-border: #333333;
+  --color-border-light: #444444;
+  --color-border-dark: #222222;
+
+  /* Semantic — Feedback */
+  --color-success: #4caf50;
+  --color-success-light: #66bb6a;
+  --color-success-dark: #388e3c;
+
+  --color-warning: #ff9800;
+  --color-warning-light: #ffb333;
+  --color-warning-dark: #e68900;
+
+  --color-error: #f44336;
+  --color-error-light: #ef5350;
+  --color-error-dark: #d32f2f;
+
+  --color-info: #2196f3;
+  --color-info-light: #42a5f5;
+  --color-info-dark: #1976d2;
+
+  /* Gradients */
+  --color-gradient-start: #1a1a2e;
+  --color-gradient-end: #16213e;
+
+  /* Overlays */
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-overlay-light: rgba(0, 0, 0, 0.3);
+  --color-overlay-dark: rgba(0, 0, 0, 0.7);
+
+  /* Scrollbar */
+  --color-scrollbar: #444444;
+  --color-scrollbar-track: #1a1a1a;
+  --color-scrollbar-hover: #555555;
+
+  /* Selection */
+  --color-selection: #c4a882;
+  --color-selection-text: #1a1a1a;
+
+  /* Focus */
+  --color-focus: #c4a882;
+  --color-focus-inset: #1a1a1a;
+
+  /* ======================================================================
+     Spacing — Base 4px Scale
+     ====================================================================== */
+
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+
+  /* Semantic spacing shortcuts */
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-4);
+  --space-lg: var(--space-6);
+  --space-xl: var(--space-8);
+  --space-2xl: var(--space-10);
+  --space-3xl: var(--space-12);
+
+  /* Container max-widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-full: 100%;
+
+  /* ======================================================================
+     Border Radius
+     ====================================================================== */
+
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+
+  /* ======================================================================
+     Shadows
+     ====================================================================== */
+
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.7);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-accent: 0 0 20px rgba(196, 168, 130, 0.15);
+  --shadow-accent-strong: 0 0 30px rgba(196, 168, 130, 0.3);
+
+  /* ======================================================================
+     Transitions
+     ====================================================================== */
+
+  --transition-fast: 100ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 400ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Transition properties */
+  --transition-colors: background-color var(--transition-normal),
+                       color var(--transition-normal),
+                       border-color var(--transition-normal);
+  --transition-transform: transform var(--transition-normal);
+  --transition-opacity: opacity var(--transition-normal);
+  --transition-shadow: box-shadow var(--transition-normal);
+  --transition-all: all var(--transition-normal);
+
+  /* ======================================================================
+     Z-Index Scale
+     ====================================================================== */
+
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* ======================================================================
+     Backdrop Filters
+     ====================================================================== */
+
+  --blur-none: blur(0);
+  --blur-sm: blur(4px);
+  --blur-md: blur(8px);
+  --blur-lg: blur(16px);
+  --blur-xl: blur(24px);
+  --blur-2xl: blur(40px);
+  --blur-3xl: blur(64px);
+
+  /* ======================================================================
+     Animation Durations
+     ====================================================================== */
+
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+  --duration-slowest: 1000ms;
+
+  /* ======================================================================
+     Layout
+     ====================================================================== */
+
+  --sidebar-width: 320px;
+  --sidebar-collapsed-width: 48px;
+  --header-height: 48px;
+  --footer-height: 48px;
+  --popup-width: 360px;
+  --popup-height: 480px;
+
+  /* ======================================================================
+     Miscellaneous
+     ====================================================================== */
+
+  --opacity-disabled: 0.5;
+  --opacity-hover: 0.8;
+  --opacity-active: 0.9;
+
+  --line-thickness: 1px;
+  --line-thickness-focus: 2px;
+
+  --border-style: solid;
+}
+
+/* ==========================================================================
+   Theme Variant Overrides
+   ========================================================================== */
+
+[data-theme='light'] {
+  --color-primary: #f5f0eb;
+  --color-primary-light: #e8e4de;
+  --color-primary-dark: #ffffff;
+
+  --color-secondary: #e8e4de;
+  --color-secondary-light: #d4ccc4;
+  --color-secondary-dark: #f0ece4;
+
+  --color-surface: #ffffff;
+  --color-surface-light: #fafafa;
+  --color-surface-dark: #f5f0eb;
+
+  --color-background: #fafafa;
+  --color-background-light: #ffffff;
+
+  --color-text: #1a1a1a;
+  --color-text-secondary: #706858;
+  --color-text-muted: #a09888;
+  --color-text-inverse: #f0ece4;
+
+  --color-accent: #a08860;
+  --color-accent-light: #b09870;
+  --color-accent-dark: #8a7a62;
+  --color-accent-muted: #c0b098;
+
+  --color-border: #d4ccc4;
+  --color-border-light: #e0dcd4;
+  --color-border-dark: #c0b8b0;
+
+  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-overlay-light: rgba(0, 0, 0, 0.1);
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+
+  --color-scrollbar: #c0b8b0;
+  --color-scrollbar-track: #f0ece4;
+  --color-scrollbar-hover: #a09888;
+
+  --color-selection: #a08860;
+  --color-selection-text: #ffffff;
+
+  --color-focus: #a08860;
+
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.18);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   Scrollbar Styling
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-scrollbar-track);
+}
+
+/* ==========================================================================
+   Focus Styles
+   ========================================================================== */
+
+:focus-visible {
+  outline: var(--line-thickness-focus) solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Selection Override
+   ========================================================================== */
+
+::selection {
+  background-color: var(--color-selection);
+  color: var(--color-selection-text);
+}

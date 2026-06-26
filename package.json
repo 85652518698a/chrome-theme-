@@ -1,0 +1,75 @@
+{
+  "name": "brutalist-chrome",
+  "version": "1.0.0",
+  "description": "A brutalist dark monochrome Chrome theme with warm undertones — new tab dashboard, side panel, and productivity tools.",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Brutalist Chrome",
+    "url": "https://github.com/brutalist-chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brutalist-chrome/brutalist-chrome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brutalist-chrome/brutalist-chrome/issues"
+  },
+  "homepage": "https://github.com/brutalist-chrome/brutalist-chrome#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "theme",
+    "brutalist",
+    "dark",
+    "monochrome",
+    "new-tab",
+    "productivity",
+    "chrome-extension"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js --dev",
+    "optimize": "node scripts/optimize-images.js",
+    "zip": "node scripts/zip.js",
+    "release": "node scripts/release.js",
+    "release:patch": "node scripts/release.js --patch",
+    "release:minor": "node scripts/release.js --minor",
+    "release:major": "node scripts/release.js --major",
+    "lint": "eslint 'scripts/**/*.js' 'theme/**/*.js'",
+    "lint:fix": "eslint 'scripts/**/*.js' 'theme/**/*.js' --fix",
+    "format": "prettier --write '**/*.{js,json,css,html}'",
+    "format:check": "prettier --check '**/*.{js,json,css,html}'",
+    "prebuild": "npm run optimize",
+    "postbuild": "npm run zip",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "clean-css": "^5.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "sharp": "^0.33.4",
+    "uglify-js": "^3.17.4"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,html}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "arrowParens": "always"
+  }
+}

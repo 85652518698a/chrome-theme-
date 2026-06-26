@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brutalist Sidebar</title>
+  <link rel="stylesheet" href="sidebar.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="sidebar-header">
+      <div id="sidebar-brand">
+        <span id="sidebar-logo">◆</span>
+        <span>Brutalist</span>
+      </div>
+      <div id="sidebar-search">
+        <input type="text" id="search-input" placeholder="Search..." />
+      </div>
+    </header>
+
+    <nav id="sidebar-tabs">
+      <button class="sidebar-tab active" data-section="bookmarks">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span>Bookmarks</span>
+      </button>
+      <button class="sidebar-tab" data-section="history">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>History</span>
+      </button>
+      <button class="sidebar-tab" data-section="todos">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span>Todos</span>
+      </button>
+      <button class="sidebar-tab" data-section="theme">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <span>Theme</span>
+      </button>
+    </nav>
+
+    <div id="sidebar-content">
+      <div class="sidebar-section active" id="section-bookmarks">
+        <div class="section-header">
+          <h3 class="section-title">Bookmarks</h3>
+          <button id="btn-bookmark-current" class="btn-icon" title="Bookmark current page">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </button>
+        </div>
+        <div id="bookmarks-list" class="items-list"></div>
+      </div>
+
+      <div class="sidebar-section" id="section-history">
+        <div class="section-header">
+          <h3 class="section-title">History</h3>
+          <button id="btn-clear-history" class="btn-icon" title="Clear history">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </button>
+        </div>
+        <div id="history-list" class="items-list"></div>
+      </div>
+
+      <div class="sidebar-section" id="section-todos">
+        <div class="section-header">
+          <h3 class="section-title">Todos</h3>
+          <button id="btn-add-todo-sidebar" class="btn-icon" title="Add todo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+        <div id="todo-input-wrap" class="hidden">
+          <input type="text" id="todo-input-sidebar" placeholder="New task..." />
+          <button id="todo-submit-sidebar" class="btn-icon primary">+</button>
+        </div>
+        <div id="todos-list-sidebar" class="items-list"></div>
+      </div>
+
+      <div class="sidebar-section" id="section-theme">
+        <div class="section-header">
+          <h3 class="section-title">Theme</h3>
+        </div>
+        <div id="theme-options-sidebar">
+          <button class="theme-btn-sidebar" data-theme="dark">
+            <span class="theme-indicator" style="background: #111;"></span>
+            <span>Dark</span>
+          </button>
+          <button class="theme-btn-sidebar" data-theme="oled">
+            <span class="theme-indicator" style="background: #000;"></span>
+            <span>OLED</span>
+          </button>
+          <button class="theme-btn-sidebar" data-theme="sepia">
+            <span class="theme-indicator" style="background: #2b2416;"></span>
+            <span>Sepia</span>
+          </button>
+          <button class="theme-btn-sidebar" data-theme="light">
+            <span class="theme-indicator" style="background: #f5f5f0;"></span>
+            <span>Light</span>
+          </button>
+        </div>
+        <div class="sidebar-divider"></div>
+        <h3 class="section-title" style="margin-bottom: 8px;">Quick Actions</h3>
+        <div id="quick-actions">
+          <button id="action-screenshot" class="action-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            Screenshot
+          </button>
+          <button id="action-settings" class="action-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Settings
+          </button>
+          <button id="action-command-palette" class="action-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            Commands
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="sidebar-footer">
+      <span id="sidebar-clock">--:--</span>
+      <span id="sidebar-weather">☀️ --°</span>
+    </footer>
+  </div>
+  <script src="sidebar.js"></script>
+</body>
+</html>

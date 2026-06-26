@@ -1,0 +1,443 @@
+{
+  "$schema": "v1",
+  "name": "Brutalist Chrome Palette",
+  "description": "Dark monochrome palette with warm gold accents, extracted from the theme image.",
+  "meta": {
+    "version": "1.0.0",
+    "author": "Brutalist Chrome",
+    "license": "MIT",
+    "image_analysis": {
+      "source": "theme.png",
+      "average_color": "rgb(107,106,103)",
+      "edge_average": "rgb(117,115,112)",
+      "overall_luminance": 106,
+      "luminance_category": "dark",
+      "corner_colors": {
+        "top_left": "rgb(201,196,192)",
+        "top_right": "rgb(107,106,103)",
+        "bottom_left": "rgb(21,21,21)",
+        "bottom_right": "rgb(42,42,42)"
+      },
+      "warm_undertones": true
+    }
+  },
+
+  "colors": {
+    "primary": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "hsl": [0, 0, 10],
+      "usage": "Frames, primary chrome surfaces",
+      "contrast_text": "#f0ece4"
+    },
+    "primaryLight": {
+      "value": "#2a2a2a",
+      "rgb": [42, 42, 42],
+      "hsl": [0, 0, 16],
+      "usage": "Toolbar, elevated surfaces"
+    },
+    "primaryDark": {
+      "value": "#111111",
+      "rgb": [17, 17, 17],
+      "hsl": [0, 0, 7],
+      "usage": "Deepest backgrounds, NTP"
+    },
+
+    "secondary": {
+      "value": "#2a2a2a",
+      "rgb": [42, 42, 42],
+      "hsl": [0, 0, 16],
+      "usage": "Secondary surfaces, controls"
+    },
+    "secondaryLight": {
+      "value": "#333333",
+      "rgb": [51, 51, 51],
+      "hsl": [0, 0, 20],
+      "usage": "Borders, dividers, hover states"
+    },
+    "secondaryDark": {
+      "value": "#222222",
+      "rgb": [34, 34, 34],
+      "hsl": [0, 0, 13],
+      "usage": "Tab backgrounds, dropdowns"
+    },
+
+    "surface": {
+      "value": "#222222",
+      "rgb": [34, 34, 34],
+      "hsl": [0, 0, 13],
+      "usage": "Card surfaces, side panel content"
+    },
+    "surfaceLight": {
+      "value": "#2e2e2e",
+      "rgb": [46, 46, 46],
+      "hsl": [0, 0, 18],
+      "usage": "Hovered surfaces, input backgrounds"
+    },
+    "surfaceDark": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "hsl": [0, 0, 10],
+      "usage": "Side panel, background strip"
+    },
+
+    "background": {
+      "value": "#111111",
+      "rgb": [17, 17, 17],
+      "hsl": [0, 0, 7],
+      "usage": "Page background, NTP"
+    },
+    "backgroundLight": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "hsl": [0, 0, 10],
+      "usage": "Elevated backgrounds"
+    },
+
+    "text": {
+      "value": "#f0ece4",
+      "rgb": [240, 236, 228],
+      "hsl": [40, 29, 92],
+      "usage": "Primary text, tab text, bookmark text"
+    },
+    "textSecondary": {
+      "value": "#a09888",
+      "rgb": [160, 152, 136],
+      "hsl": [40, 11, 58],
+      "usage": "Secondary text, snippets, captions"
+    },
+    "textMuted": {
+      "value": "#706858",
+      "rgb": [112, 104, 88],
+      "hsl": [40, 12, 39],
+      "usage": "Disabled text, placeholder"
+    },
+    "textInverse": {
+      "value": "#111111",
+      "rgb": [17, 17, 17],
+      "hsl": [0, 0, 7],
+      "usage": "Text on light/colored backgrounds"
+    },
+
+    "accent": {
+      "value": "#c4a882",
+      "rgb": [196, 168, 130],
+      "hsl": [35, 36, 64],
+      "usage": "Primary accent, links, interactive elements",
+      "contrast_text": "#1a1a1a"
+    },
+    "accentLight": {
+      "value": "#d4c4a8",
+      "rgb": [212, 196, 168],
+      "hsl": [38, 34, 75],
+      "usage": "Hovered accent, highlights"
+    },
+    "accentDark": {
+      "value": "#a08860",
+      "rgb": [160, 136, 96],
+      "hsl": [35, 25, 50],
+      "usage": "Active accent, pressed states"
+    },
+    "accentMuted": {
+      "value": "#8a7a62",
+      "rgb": [138, 122, 98],
+      "hsl": [36, 17, 46],
+      "usage": "Subtle accent, decorative borders"
+    },
+
+    "border": {
+      "value": "#333333",
+      "rgb": [51, 51, 51],
+      "hsl": [0, 0, 20],
+      "usage": "Default borders, dividers"
+    },
+    "borderLight": {
+      "value": "#444444",
+      "rgb": [68, 68, 68],
+      "hsl": [0, 0, 27],
+      "usage": "Subtle borders, input borders"
+    },
+    "borderDark": {
+      "value": "#222222",
+      "rgb": [34, 34, 34],
+      "hsl": [0, 0, 13],
+      "usage": "Strong borders, focus rings"
+    },
+
+    "success": {
+      "value": "#4caf50",
+      "rgb": [76, 175, 80],
+      "hsl": [122, 39, 49],
+      "usage": "Success states, positive indicators"
+    },
+    "successLight": {
+      "value": "#66bb6a",
+      "rgb": [102, 187, 106],
+      "hsl": [122, 39, 57],
+      "usage": "Hovered success"
+    },
+    "successDark": {
+      "value": "#388e3c",
+      "rgb": [56, 142, 60],
+      "hsl": [122, 39, 39],
+      "usage": "Active success"
+    },
+
+    "warning": {
+      "value": "#ff9800",
+      "rgb": [255, 152, 0],
+      "hsl": [36, 100, 50],
+      "usage": "Warning states, caution indicators"
+    },
+    "warningLight": {
+      "value": "#ffb333",
+      "rgb": [255, 179, 51],
+      "hsl": [36, 100, 60],
+      "usage": "Hovered warning"
+    },
+    "warningDark": {
+      "value": "#e68900",
+      "rgb": [230, 137, 0],
+      "hsl": [36, 100, 45],
+      "usage": "Active warning"
+    },
+
+    "error": {
+      "value": "#f44336",
+      "rgb": [244, 67, 54],
+      "hsl": [4, 90, 58],
+      "usage": "Error states, destructive actions"
+    },
+    "errorLight": {
+      "value": "#ef5350",
+      "rgb": [239, 83, 80],
+      "hsl": [4, 90, 63],
+      "usage": "Hovered error"
+    },
+    "errorDark": {
+      "value": "#d32f2f",
+      "rgb": [211, 47, 47],
+      "hsl": [4, 90, 51],
+      "usage": "Active error"
+    },
+
+    "info": {
+      "value": "#2196f3",
+      "rgb": [33, 150, 243],
+      "hsl": [207, 90, 54],
+      "usage": "Info states, informational indicators"
+    },
+    "infoLight": {
+      "value": "#42a5f5",
+      "rgb": [66, 165, 245],
+      "hsl": [207, 90, 61],
+      "usage": "Hovered info"
+    },
+    "infoDark": {
+      "value": "#1976d2",
+      "rgb": [25, 118, 210],
+      "hsl": [207, 90, 46],
+      "usage": "Active info"
+    },
+
+    "gradientStart": {
+      "value": "#1a1a2e",
+      "rgb": [26, 26, 46],
+      "hsl": [240, 28, 14],
+      "usage": "Gradient origin"
+    },
+    "gradientEnd": {
+      "value": "#16213e",
+      "rgb": [22, 33, 62],
+      "hsl": [223, 48, 16],
+      "usage": "Gradient terminus"
+    },
+
+    "overlay": {
+      "value": "rgba(0, 0, 0, 0.5)",
+      "usage": "Modal overlays, backdrops"
+    },
+    "overlayLight": {
+      "value": "rgba(0, 0, 0, 0.3)",
+      "usage": "Subtle overlays"
+    },
+    "overlayDark": {
+      "value": "rgba(0, 0, 0, 0.7)",
+      "usage": "Heavy overlays"
+    },
+
+    "scrollbar": {
+      "value": "#444444",
+      "rgb": [68, 68, 68],
+      "usage": "Scrollbar thumb"
+    },
+    "scrollbarTrack": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "usage": "Scrollbar track"
+    },
+    "scrollbarHover": {
+      "value": "#555555",
+      "rgb": [85, 85, 85],
+      "usage": "Scrollbar hover"
+    },
+
+    "selection": {
+      "value": "#c4a882",
+      "rgb": [196, 168, 130],
+      "usage": "Text selection background"
+    },
+    "selectionText": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "usage": "Text selection color"
+    },
+
+    "focus": {
+      "value": "#c4a882",
+      "rgb": [196, 168, 130],
+      "usage": "Focus ring color"
+    },
+    "focusInset": {
+      "value": "#1a1a1a",
+      "rgb": [26, 26, 26],
+      "usage": "Focus ring inset"
+    }
+  },
+
+  "chromeThemeProperties": {
+    "frame": "primary.value",
+    "frame_inactive": "primaryDark.value",
+    "frame_incognito": "primaryDark.value",
+    "frame_incognito_inactive": "#0a0a0a",
+    "toolbar": "primaryLight.value",
+    "toolbar_button_icon": "#c0c0c0",
+    "toolbar_text": "text.value",
+    "tab_background_color": "secondaryDark.value",
+    "tab_background_text": "textSecondary.value",
+    "tab_text": "text.value",
+    "bookmark_text": "text.value",
+    "ntp_background": "background.value",
+    "ntp_text": "text.value",
+    "ntp_link": "accent.value",
+    "ntp_snippet": "textSecondary.value",
+    "ntp_header": "text.value",
+    "button_background": "secondaryLight.value",
+    "control_background": "secondaryDark.value",
+    "control_border": "secondaryLight.value",
+    "omnibox_background": "secondaryDark.value",
+    "omnibox_text": "text.value",
+    "omnibox_dropdown_background": "primary.value",
+    "omnibox_dropdown_text": "text.value",
+    "omnibox_dropdown_selection": "secondaryLight.value",
+    "side_panel_background": "primary.value",
+    "side_panel_content_background": "secondaryDark.value",
+    "side_panel_header_background": "primary.value",
+    "side_panel_border": "secondaryLight.value",
+    "background_tab_strip_background": "primary.value"
+  },
+
+  "dark": {
+    "primary": "#1a1a1a",
+    "secondary": "#2a2a2a",
+    "surface": "#222222",
+    "background": "#111111",
+    "text": "#f0ece4",
+    "textSecondary": "#a09888",
+    "accent": "#c4a882",
+    "border": "#333333",
+    "overlay": "rgba(0,0,0,0.6)"
+  },
+
+  "light": {
+    "primary": "#f5f0eb",
+    "secondary": "#e8e4de",
+    "surface": "#ffffff",
+    "background": "#fafafa",
+    "text": "#1a1a1a",
+    "textSecondary": "#706858",
+    "accent": "#a08860",
+    "border": "#d4ccc4",
+    "overlay": "rgba(0,0,0,0.2)"
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px"
+  },
+
+  "borderRadius": {
+    "sm": "4px",
+    "md": "8px",
+    "lg": "12px",
+    "xl": "16px",
+    "2xl": "24px",
+    "full": "9999px"
+  },
+
+  "typography": {
+    "fontFamily": {
+      "sans": "'Inter', system-ui, -apple-system, sans-serif",
+      "mono": "'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace"
+    },
+    "fontSize": {
+      "xs": "12px",
+      "sm": "14px",
+      "base": "16px",
+      "lg": "18px",
+      "xl": "20px",
+      "2xl": "24px",
+      "3xl": "32px",
+      "4xl": "48px",
+      "5xl": "64px"
+    },
+    "fontWeight": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "extrabold": 800
+    },
+    "lineHeight": {
+      "tight": 1.1,
+      "normal": 1.5,
+      "relaxed": 1.75
+    },
+    "letterSpacing": {
+      "tight": "-0.025em",
+      "normal": "0",
+      "wide": "0.05em",
+      "wider": "0.1em"
+    }
+  },
+
+  "shadows": {
+    "subtle": "0 1px 3px rgba(0,0,0,0.3)",
+    "medium": "0 4px 12px rgba(0,0,0,0.4)",
+    "large": "0 8px 24px rgba(0,0,0,0.5)",
+    "xl": "0 16px 48px rgba(0,0,0,0.6)",
+    "inner": "inset 0 2px 4px rgba(0,0,0,0.3)"
+  },
+
+  "transitions": {
+    "fast": "100ms ease",
+    "normal": "200ms ease",
+    "slow": "400ms ease"
+  },
+
+  "zIndex": {
+    "base": 1,
+    "dropdown": 100,
+    "sticky": 200,
+    "overlay": 300,
+    "modal": 400,
+    "toast": 500,
+    "tooltip": 600
+  }
+}

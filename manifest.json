@@ -1,0 +1,185 @@
+{
+  "manifest_version": 3,
+  "name": "Brutalist Chrome",
+  "short_name": "Brutalist",
+  "version": "1.0.0",
+  "version_name": "1.0.0",
+  "description": "A brutalist dark monochrome theme with warm undertones — new tab dashboard, side panel, and productivity tools.",
+  "homepage_url": "https://github.com/brutalist-chrome",
+  "author": "Brutalist Chrome",
+  "minimum_chrome_version": "116",
+
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "64": "assets/icons/icon-64.png",
+    "128": "assets/icons/icon-128.png"
+  },
+
+  "permissions": [
+    "storage",
+    "identity",
+    "geolocation",
+    "alarms",
+    "tabs",
+    "bookmarks",
+    "topSites",
+    "management",
+    "notifications",
+    "contextMenus",
+    "commands",
+    "sidePanel"
+  ],
+
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://api.openweathermap.org/*",
+    "https://api.quotable.io/*",
+    "https://api.unsplash.com/*",
+    "https://www.googleapis.com/*"
+  ],
+
+  "commands": {
+    "open-search": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Open quick search"
+    },
+    "open-todo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
+      },
+      "description": "Open todo panel"
+    },
+    "toggle-sidebar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Toggle side panel"
+    },
+    "open-bookmarks": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B",
+        "mac": "Command+Shift+B"
+      },
+      "description": "Open bookmarks"
+    },
+    "reload-theme": {
+      "description": "Reload theme colors"
+    }
+  },
+
+  "chrome_url_overrides": {
+    "newtab": "new-tab/index.html"
+  },
+
+  "side_panel": {
+    "default_path": "side-panel/index.html"
+  },
+
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_title": "Brutalist Chrome",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "64": "assets/icons/icon-64.png",
+      "128": "assets/icons/icon-128.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content/content.css"],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "theme/*",
+        "fonts/*"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "theme": {
+    "images": {
+      "theme_frame": "assets/wallpapers/background.webp",
+      "theme_toolbar": "assets/wallpapers/background.webp",
+      "theme_tab_background": "assets/wallpapers/background.webp",
+      "theme_ntp_background": "assets/wallpapers/background.webp"
+    },
+    "colors": {
+      "frame": [26, 26, 26],
+      "frame_inactive": [17, 17, 17],
+      "frame_incognito": [17, 17, 17],
+      "frame_incognito_inactive": [10, 10, 10],
+      "toolbar": [42, 42, 42],
+      "toolbar_button_icon": [192, 192, 192],
+      "toolbar_text": [240, 236, 228],
+      "tab_background_color": [34, 34, 34],
+      "tab_background_text": [160, 152, 136],
+      "tab_foreground_color": [240, 236, 228],
+      "tab_text": [240, 236, 228],
+      "tab_group_tab_color": [196, 168, 130],
+      "tab_group_context_color": [196, 168, 130],
+      "bookmark_text": [240, 236, 228],
+      "ntp_background": [17, 17, 17],
+      "ntp_text": [240, 236, 228],
+      "ntp_link": [196, 168, 130],
+      "ntp_snippet": [160, 152, 136],
+      "ntp_header": [240, 236, 228],
+      "button_background": [51, 51, 51],
+      "control_background": [34, 34, 34],
+      "control_border": [51, 51, 51],
+      "omnibox_background": [34, 34, 34],
+      "omnibox_text": [240, 236, 228],
+      "omnibox_dropdown_background": [26, 26, 26],
+      "omnibox_dropdown_text": [240, 236, 228],
+      "omnibox_dropdown_selection": [51, 51, 51],
+      "background_tab_strip_background": [26, 26, 26],
+      "side_panel_background": [26, 26, 26],
+      "side_panel_content_background": [34, 34, 34],
+      "side_panel_header_background": [26, 26, 26],
+      "side_panel_border": [51, 51, 51]
+    },
+    "tints": {
+      "buttons": [0.1, 0.5, 0.5],
+      "frame": [-1, -1, -1],
+      "background_tab": [0.08, 0.32, 0.48]
+    },
+    "properties": {
+      "ntp_background_alignment": "center",
+      "ntp_background_repeat": "no-repeat",
+      "ntp_logo_alternate": 1
+    }
+  },
+
+  "keyboard_focus": {
+    "tab": true,
+    "omnibox": true,
+    "bookmark": false
+  }
+}
