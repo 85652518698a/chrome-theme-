@@ -23,7 +23,7 @@ async function initializeExtension(details) {
       await storage.saveAllSettings(JSON.parse(JSON.stringify(DEFAULTS)));
       await storage.updateSetting('system', 'firstRun', false);
       await storage.updateSetting('system', 'setupComplete', false);
-      chrome.tabs.create({ url: chrome.runtime.getURL('options/options.html') });
+      chrome.tabs.create({ url: chrome.runtime.getURL('extension/options/options.html') });
     }
 
     if (details.reason === 'update') {
