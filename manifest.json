@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "version_name": "1.0.0",
   "description": "A brutalist dark monochrome theme with warm undertones — new tab dashboard, side panel, and productivity tools.",
-  "homepage_url": "https://github.com/brutalist-chrome",
+  "homepage_url": "https://github.com/85652518698a/chrome-theme-",
   "author": "Brutalist Chrome",
   "minimum_chrome_version": "116",
 
@@ -28,7 +28,6 @@
     "management",
     "notifications",
     "contextMenus",
-    "commands",
     "sidePanel"
   ],
 
@@ -41,19 +40,12 @@
   ],
 
   "commands": {
-    "open-search": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+Shift+K",
         "mac": "Command+Shift+K"
       },
-      "description": "Open quick search"
-    },
-    "open-todo": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+T",
-        "mac": "Command+Shift+T"
-      },
-      "description": "Open todo panel"
+      "description": "Open Brutalist Chrome popup"
     },
     "toggle-sidebar": {
       "suggested_key": {
@@ -62,15 +54,33 @@
       },
       "description": "Toggle side panel"
     },
-    "open-bookmarks": {
+    "toggle-theme": {
       "suggested_key": {
-        "default": "Ctrl+Shift+B",
-        "mac": "Command+Shift+B"
+        "default": "Ctrl+Shift+T",
+        "mac": "Command+Shift+T"
       },
-      "description": "Open bookmarks"
+      "description": "Toggle theme"
     },
-    "reload-theme": {
-      "description": "Reload theme colors"
+    "open-command-palette": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Open command palette"
+    },
+    "search-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Search selected text"
+    },
+    "quick-add-todo": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q",
+        "mac": "Command+Shift+Q"
+      },
+      "description": "Quick add todo"
     }
   },
 
@@ -154,11 +164,7 @@
       "omnibox_text": [240, 236, 228],
       "omnibox_dropdown_background": [26, 26, 26],
       "omnibox_dropdown_text": [240, 236, 228],
-      "omnibox_dropdown_selection": [51, 51, 51],
-      "side_panel_background": [26, 26, 26],
-      "side_panel_content_background": [34, 34, 34],
-      "side_panel_header_background": [26, 26, 26],
-      "side_panel_border": [51, 51, 51]
+      "omnibox_dropdown_selection": [51, 51, 51]
     },
     "tints": {
       "buttons": [0.1, 0.5, 0.5],
