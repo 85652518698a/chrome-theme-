@@ -51,7 +51,7 @@ export class SearchEngine {
       this.onSearch(query, this.currentEngine);
     }
 
-    window.location.href = url;
+    window.open(url, '_blank');
   }
 
   getSuggestions(query) {

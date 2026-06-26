@@ -22,20 +22,20 @@ export class CommandSystem {
 
     this.register('open-sidebar', 'Toggle Sidebar', 'Ctrl+Shift+S', async () => {
       try {
-        await chrome.sidePanel.open({ action: 'toggle' });
-      } catch {
         const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
         if (tab) {
           await chrome.sidePanel.open({ tabId: tab.id });
         }
+      } catch (e) {
+        console.error('Could not open sidebar:', e);
       }
     });
 
     this.register('open-popup', 'Open Popup', 'Ctrl+Shift+K', async () => {
       try {
         await chrome.action.openPopup();
-      } catch (e) {
-        console.error('Could not open popup:', e);
+      } catch {
+        chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
       }
     });
 

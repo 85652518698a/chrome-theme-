@@ -260,7 +260,7 @@ export class ErrorHandler {
       if (chrome?.notifications) {
         chrome.notifications.create({
           type: 'basic',
-          iconUrl: 'assets/icon48.png',
+          iconUrl: chrome.runtime.getURL('assets/icons/icon48.png'),
           title,
           message
         });

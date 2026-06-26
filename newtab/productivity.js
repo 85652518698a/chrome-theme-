@@ -467,7 +467,7 @@ export class ProductivityDashboard {
 
   showNotification(title, message) {
     if ('Notification' in window && Notification.permission === 'granted') {
-      new Notification(title, { body: message, icon: '/icons/icon48.png' });
+      new Notification(title, { body: message, icon: 'icons/icon48.png' });
     } else if ('Notification' in window && Notification.permission !== 'denied') {
       Notification.requestPermission();
     }

@@ -38,6 +38,7 @@ class NewTabApp {
       temperatureUnit: 'metric',
       focusMode: false,
       compactSidebar: false,
+      debug: false,
       widgetOrder: ['clock', 'search', 'quote', 'bookmarks', 'todo', 'notes'],
       hiddenWidgets: [],
       background: 'default'
@@ -384,7 +385,7 @@ class NewTabApp {
   }
 
   log(...args) {
-    if (process.env.NODE_ENV !== 'production') {
+    if (this.settings.debug) {
       console.log('[NewTab]', ...args);
     }
   }

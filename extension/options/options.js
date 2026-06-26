@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('btn-add-link').addEventListener('click', () => this.addQuickLinkRow());
       document.getElementById('about-report').addEventListener('click', (e) => {
         e.preventDefault();
-        chrome.tabs.create({ url: 'https://github.com/anomalyco/opencode/issues' });
+        chrome.tabs.create({ url: 'https://github.com/85652518698a/chrome-theme-/issues' });
       });
       document.getElementById('about-website').addEventListener('click', (e) => {
         e.preventDefault();
-        chrome.tabs.create({ url: 'https://opencode.ai' });
+        chrome.tabs.create({ url: 'https://github.com/85652518698a/chrome-theme-' });
       });
     }
 

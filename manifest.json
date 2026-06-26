@@ -10,11 +10,11 @@
   "minimum_chrome_version": "116",
 
   "icons": {
-    "16": "assets/icons/icon-16.png",
-    "32": "assets/icons/icon-32.png",
-    "48": "assets/icons/icon-48.png",
-    "64": "assets/icons/icon-64.png",
-    "128": "assets/icons/icon-128.png"
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "64": "assets/icons/icon64.png",
+    "128": "assets/icons/icon128.png"
   },
 
   "permissions": [
@@ -75,40 +75,39 @@
   },
 
   "chrome_url_overrides": {
-    "newtab": "new-tab/index.html"
+    "newtab": "newtab/index.html"
   },
 
   "side_panel": {
-    "default_path": "side-panel/index.html"
+    "default_path": "extension/sidebar/sidebar.html"
   },
 
   "options_ui": {
-    "page": "options/index.html",
+    "page": "extension/options/options.html",
     "open_in_tab": true
   },
 
   "action": {
-    "default_popup": "popup/index.html",
+    "default_popup": "extension/popup/popup.html",
     "default_title": "Brutalist Chrome",
     "default_icon": {
-      "16": "assets/icons/icon-16.png",
-      "32": "assets/icons/icon-32.png",
-      "48": "assets/icons/icon-48.png",
-      "64": "assets/icons/icon-64.png",
-      "128": "assets/icons/icon-128.png"
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "64": "assets/icons/icon64.png",
+      "128": "assets/icons/icon128.png"
     }
   },
 
   "background": {
-    "service_worker": "background/service-worker.js",
+    "service_worker": "extension/background.js",
     "type": "module"
   },
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["content/content.css"],
-      "js": ["content/content.js"],
+      "js": ["extension/content.js"],
       "run_at": "document_start"
     }
   ],
@@ -117,8 +116,7 @@
     {
       "resources": [
         "assets/*",
-        "theme/*",
-        "fonts/*"
+        "theme/*"
       ],
       "matches": ["<all_urls>"]
     }
@@ -143,8 +141,6 @@
       "tab_background_text": [160, 152, 136],
       "tab_foreground_color": [240, 236, 228],
       "tab_text": [240, 236, 228],
-      "tab_group_tab_color": [196, 168, 130],
-      "tab_group_context_color": [196, 168, 130],
       "bookmark_text": [240, 236, 228],
       "ntp_background": [17, 17, 17],
       "ntp_text": [240, 236, 228],
@@ -159,7 +155,6 @@
       "omnibox_dropdown_background": [26, 26, 26],
       "omnibox_dropdown_text": [240, 236, 228],
       "omnibox_dropdown_selection": [51, 51, 51],
-      "background_tab_strip_background": [26, 26, 26],
       "side_panel_background": [26, 26, 26],
       "side_panel_content_background": [34, 34, 34],
       "side_panel_header_background": [26, 26, 26],
@@ -177,9 +172,4 @@
     }
   },
 
-  "keyboard_focus": {
-    "tab": true,
-    "omnibox": true,
-    "bookmark": false
-  }
 }

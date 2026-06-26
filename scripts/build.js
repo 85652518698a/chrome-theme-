@@ -25,14 +25,14 @@ const COPY_TASKS = [
   'manifest.json',
   'theme',
   'assets',
-  { src: 'popup', dest: 'popup' },
-  { src: 'new-tab', dest: 'new-tab' },
-  { src: 'side-panel', dest: 'side-panel' },
-  { src: 'options', dest: 'options' },
-  { src: 'background', dest: 'background' },
-  { src: 'content', dest: 'content' },
-  { src: 'fonts', dest: 'fonts' },
-  { src: '_locales', dest: '_locales' },
+  { src: 'extension/popup', dest: 'popup' },
+  { src: 'newtab', dest: 'newtab' },
+  { src: 'extension/sidebar', dest: 'sidebar' },
+  { src: 'extension/options', dest: 'options' },
+  { src: 'extension', dest: 'extension' },
+  { src: 'docs', dest: 'docs' },
+  { src: 'scripts', dest: 'scripts' },
+  { src: 'package.json', dest: 'package.json' },
 ];
 
 // File extensions to minify
